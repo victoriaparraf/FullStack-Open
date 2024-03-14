@@ -1,0 +1,9 @@
+graph TD;
+    A[Abrir la página SPA] -->|1. Cargar HTML, CSS y JS| B[Cargar recursos];
+    B --> C{Recursos cargados correctamente?};
+    C -->|Sí| D[Mostrar la página SPA];
+    C -->|No| E[Mostrar mensaje de error];
+    D --> F{Usuario interactúa con la SPA};
+    F -->|Sí| G[Realizar acciones de la SPA];
+    G --> F;
+    F -->|No| H[Cerrar la página SPA];
