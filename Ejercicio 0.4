@@ -1,0 +1,12 @@
+graph TD;
+    A[Abrir la página] -->|1. Usuario escribe nota| B[Introducir nota];
+    B --> C{Nota vacía?};
+    C -->|Sí| D[Mostrar mensaje de error];
+    C -->|No| E{Usuario hace clic en Save};
+    E -->|Sí| F[Enviar nota al servidor];
+    F --> G{Nota guardada correctamente?};
+    G -->|Sí| H[Mostrar confirmación];
+    G -->|No| I[Mostrar mensaje de error];
+    E -->|No| B;
+    I --> B;
+    H --> A;
