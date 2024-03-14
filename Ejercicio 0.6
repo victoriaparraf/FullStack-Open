@@ -1,0 +1,12 @@
+graph TD;
+    A[Abrir la página SPA] -->|1. Cargar HTML, CSS y JS| B[Cargar recursos];
+    B --> C{Recursos cargados correctamente?};
+    C -->|Sí| D[Mostrar la página SPA];
+    C -->|No| E[Mostrar mensaje de error];
+    D --> F{Usuario escribe una nueva nota};
+    F -->|Sí| G[Guardar nota en memoria local];
+    G --> H{Nota guardada correctamente?};
+    H -->|Sí| I[Actualizar lista de notas];
+    H -->|No| J[Mostrar mensaje de error];
+    I --> F;
+    F -->|No| D;
